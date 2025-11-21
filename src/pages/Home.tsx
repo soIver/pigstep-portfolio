@@ -12,14 +12,13 @@ import { CASES } from '../data/cases';
 
 export default function Home({ openModal }: { openModal?: () => void }) {
 
-    // Анимация при появлении в зоне видимости
+    // анимация при появлении в зоне видимости
     const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
     const [servicesRef, servicesInView] = useInView({ triggerOnce: true, threshold: 0.1 });
     const [casesRef, casesInView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
     return (
         <>
-            {/* ====================== HERO SECTION ====================== */}
             <section className="bg-dark text-light py-5" style={{ minHeight: '90vh', display: 'flex', alignItems: 'center' }}>
                 <Container>
                     <Row className="align-items-center">
@@ -78,7 +77,6 @@ export default function Home({ openModal }: { openModal?: () => void }) {
                 </Container>
             </section>
 
-            {/* ====================== УСЛУГИ (быстрый обзор) ====================== */}
             <section className="py-5 bg-light">
                 <Container ref={servicesRef}>
                     <div className={servicesInView ? 'text-center mb-5 animate__animated animate__fadeInUp' : 'text-center mb-5'}>
@@ -111,7 +109,6 @@ export default function Home({ openModal }: { openModal?: () => void }) {
                 </Container>
             </section>
 
-            {/* ====================== ПОСЛЕДНИЕ КЕЙСЫ ====================== */}
             <section className="py-5">
                 <Container ref={casesRef}>
                     <div className={casesInView ? 'text-center mb-5 animate__animated animate__fadeInUp' : 'text-center mb-5'}>
@@ -120,7 +117,6 @@ export default function Home({ openModal }: { openModal?: () => void }) {
                     </div>
 
                     <Row className="g-4">
-                        { /* use shared CASES dataset and show first 3 as recent */}
                         {CASES.slice(0, 3).map((c, idx) => (
                             <Col lg={4} key={c.id}>
                                 <Link to={`/cases/${c.id}`} className="text-decoration-none">
@@ -153,7 +149,6 @@ export default function Home({ openModal }: { openModal?: () => void }) {
                 </Container>
             </section>
 
-            {/* ====================== CTA SECTION ====================== */}
             <section className="py-5 bg-primary text-light">
                 <Container className="text-center">
                     <h2 className="display-5 fw-bold mb-4">Готовы к росту?</h2>
