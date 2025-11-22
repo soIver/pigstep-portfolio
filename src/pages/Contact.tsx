@@ -20,9 +20,9 @@ export default function Contact() {
                     <h1 className="display-5 fw-bold mb-3">Контакты</h1>
                     <p className="text-muted">Свяжитесь с нами для обсуждения проекта — мы быстро вернёмся с предложением.</p>
 
-                    <p className="mb-1"><strong>Электронная почта:</strong> hello@ourteam.example</p>
+                    <p className="mb-1"><strong>Электронная почта:</strong> pigstep@leads.com</p>
                     <p className="mb-1"><strong>Телефон:</strong> +7 (999) 123-45-67</p>
-                    <p className="mb-1"><strong>Адрес:</strong> Москва, Россия</p>
+                    <p className="mb-1"><strong>Адрес:</strong> Киров, Россия</p>
                 </Col>
 
                 <Col md={6}>

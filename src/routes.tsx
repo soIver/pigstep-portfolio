@@ -10,10 +10,10 @@ import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 
-export default function AppRoutes({ openModal }: { openModal?: () => void }) {
+export default function AppRoutes() {
     return (
         <Routes>
-            <Route path="/" element={<Home openModal={openModal} />} />
+            <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/services/web-development" element={<ServiceDetail />} />
             <Route path="/services/branding" element={<ServiceDetail />} />

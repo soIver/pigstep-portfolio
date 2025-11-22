@@ -10,7 +10,7 @@ import { NavLink } from 'react-router-dom';
 import 'animate.css';
 import { CASES } from '../data/cases';
 
-export default function Home({ openModal }: { openModal?: () => void }) {
+export default function Home() {
 
     // анимация при появлении в зоне видимости
     const [heroRef, heroInView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -31,9 +31,9 @@ export default function Home({ openModal }: { openModal?: () => void }) {
                                 Более 8 лет опыта и 150+ успешных проектов.
                             </p>
                             <div className="d-flex flex-column flex-sm-row gap-3">
-                                <Button variant="warning" size="lg" className="fw-bold text-dark" onClick={openModal}>
+                                <NavLink to="/contact" className="btn btn-lg btn-hover-warning">
                                     Обсудить проект
-                                </Button>
+                                </NavLink>
                                 <a href="/cases" className="text-decoration-none">
                                     <Button variant="outline-light" size="lg">Посмотреть кейсы →</Button>
                                 </a>

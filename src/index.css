@@ -67,7 +67,6 @@ button:hover {
   border-color: #646cff;
 }
 
-/* Пользовательская кнопка: черная рамка по умолчанию, желтый фон при hover */
 .btn-hover-warning {
   background-color: transparent;
   color: inherit;
@@ -79,11 +78,8 @@ button:hover {
 .btn-hover-warning:not(:disabled):focus,
 .btn-hover-warning:not(:disabled):focus-visible {
   background-color: #ffc107;
-  /* желтый фон при наведении */
   border-color: #ffc107;
-  /* рамка становится желтой при hover */
   color: #ffffff;
-  /* текст чёрный на желтом фоне */
 }
 
 .btn-hover-warning {
